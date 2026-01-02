@@ -1,23 +1,26 @@
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("p1 successful");
+    // resolve("p1 successful");
+    reject("p1 reject");
   }, 3000);
 });
 
 const p2 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("p2 successful");
+    // resolve("p2 successful");
+    reject("p2 reject");
   }, 1000);
 });
 
 const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("p3 successful");
+    // resolve("p3 successful");
+    reject("p3 reject");
   }, 2000);
 });
 
 
-Promise.all([p1,p2,p3]).then((res) => {
+Promise.any([p1,p2,p3]).then((res) => {
 
     console.log(res)
 
