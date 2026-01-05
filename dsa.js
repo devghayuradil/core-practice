@@ -97,25 +97,38 @@
 
 // console.log(firstDuplicate([5, 3, 2, 5, 3, 2]));
 
-const removeDuplicates = (array) => {
+// const removeDuplicates = (array) => {
+//   let count = 0;
+
+//   for (let index = 1; index < array.length; index++) {
+//     if (array[count] !== array[index]) {
+//         count++
+//         array[count] = array[index]
+//     }
+//   }
+
+//   for(let secIndex = count + 1; secIndex < array.length; secIndex++){
+//     array[secIndex] = "_"
+//   }
+
+//   return {
+//     k: count + 1,
+//     nums: array,
+//   };
+// };
+// result = removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
+
+// console.log(result.k, result.nums);
+
+const removeElement = (nums, val) => {
   let count = 0;
-  
-  for (let index = 1; index < array.length; index++) {
-    if (array[count] !== array[index]) {
+  for (let index = 0; index < nums.length; index++) {
+    if (nums[index] !== val) {
+        nums[count] = nums[index]
         count++
-        array[count] = array[index]
     }
   }
-
-  for(let secIndex = count + 1; secIndex < array.length; secIndex++){
-    array[secIndex] = "_"
-  }
-
-  return {
-    k: count + 1,
-    nums: array,
-  };
+  return count
 };
-result = removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
 
-console.log(result.k, result.nums);
+console.log(removeElement([0,1,2,2,3,0,4,2], 2));
