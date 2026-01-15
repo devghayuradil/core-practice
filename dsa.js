@@ -119,16 +119,109 @@
 // result = removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
 
 // console.log(result.k, result.nums);
+// let nums = [0,1,2,2,3,0,4,2]
 
-const removeElement = (nums, val) => {
-  let count = 0;
-  for (let index = 0; index < nums.length; index++) {
-    if (nums[index] !== val) {
-        nums[count] = nums[index]
-        count++
-    }
-  }
-  return count
-};
+// const removeElement = (nums, val) => {
+//   let count = 0;
+//   for (let index = 0; index < nums.length; index++) {
+//     if (nums[index] !== val) {
+//         nums[count] = nums[index]
+//         count++
+//     }
+//   }
+//   return count
+// };
 
-console.log(removeElement([0,1,2,2,3,0,4,2], 2));
+// console.log(nums.splice(0,removeElement(nums, 2)));
+// console.log(removeElement(nums, 2));
+
+// const reverseString = (s) => {
+//   let left = 0;
+//   let right = s.length - 1;
+//   while (left < right) {
+//     let temp = s[left];
+//     s[left] = s[right];
+//     s[right] = temp;
+//     left++;
+//     right--;
+//   }
+//   return s;
+// };
+
+// console.log(reverseString(["h", "e", "l", "l", "o"]));
+
+// const maxProfit = (prices) => {
+//   let minPrice = Infinity;
+//   let maxProfit = 0;
+
+//   for (let price of prices) {
+//     if (price < minPrice) {
+//       minPrice = price;
+//     } else {
+//       let profit = price - minPrice;
+//       if (profit > maxProfit) {
+//         maxProfit = profit;
+//       }
+//     }
+//   }
+
+//   return maxProfit;
+// };
+
+// console.log(maxProfit([8, 7, 15, 9, 10, 1]));
+
+// const merge = (nums1, m, nums2, n) => {
+//   console.log(nums1.length);
+// };
+
+// console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+// console.log(merge([1], 1, [], 0));
+// console.log(merge([0], 0, [1], 1));
+
+// const removeDubAndSort = (arr) => {
+//   let validate = {};
+//   let result = [];
+
+//   // remove duplicates 
+//   for (const value of arr) {
+//     if (!validate[value]) {
+//       validate[value] = true;
+//       result.push(value);
+//     }
+//   }
+
+//   // sort array 
+//   for (let i = 0; i < result.length; i++) {
+//     for (let j = i + 1; j < result.length; j++) {
+//       if (result[i] > result[j]) {
+//         let temp = result[i];
+//         result[i] = result[j];
+//         result[j] = temp;
+//       }
+//     }
+//   }
+
+//   return result;
+// };
+
+// console.log(
+//   removeDubAndSort([
+//     1, 2, 1, 2, 31, -1, 5, 1, 2, 4, 3, 6, 7, 5, 4, 7, 6, 8, 9, 7, 5, 4,
+//   ])
+// );
+
+// const sort = (array) => {
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[i] > array[j]) {
+//         let temp = array[i];
+//         array[i] = array[j];
+//         array[j] = temp;
+//       }
+//     }
+//   }
+
+//   return array;
+// };
+
+// console.log(sort([5, 6, 4, 0, 3, 7, 8, 9, 1, 2]));
