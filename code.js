@@ -420,22 +420,22 @@
 // console.log(findDuplicates([1])); // Output: []
 
 // =================== Two Sum Variation ===================
-const findPairs = (arr, target) => {
-  let db = {};
-  let result = [];
-  for (let num of arr) {
-    let com = target - num;
-    if (db[com]) {
-      let pair = [com, num].sort((a, b) => a - b);
-      result.push(pair);
-    }
-    db[num] = true;
-  }
-  console.log(db);
-  return result;
-};
+// const findPairs = (arr, target) => {
+//   let db = {};
+//   let result = [];
+//   for (let num of arr) {
+//     let com = target - num;
+//     if (db[com]) {
+//       let pair = [com, num].sort((a, b) => a - b);
+//       result.push(pair);
+//     }
+//     db[num] = true;
+//   }
+//   console.log(db);
+//   return result;
+// };
 
-console.log(findPairs([2, 3, 3, 5, 7, -1, 0,4], 6));
+// console.log(findPairs([2, 3, 3, 5, 7, -1, 0,4], 6));
 
 // =========== move all zeros at the end =============
 // const moveZeros = (arr) => {
@@ -487,7 +487,6 @@ console.log(findPairs([2, 3, 3, 5, 7, -1, 0,4], 6));
 //       }
 //     }
 
-
 //     return newArray
 // };
 
@@ -506,3 +505,9 @@ console.log(findPairs([2, 3, 3, 5, 7, -1, 0,4], 6));
 // }
 
 // console.log(isPalindrome("hel"));
+
+if(true){
+  var a = 10;
+}
+
+console.log(a);
