@@ -506,8 +506,21 @@
 
 // console.log(isPalindrome("hel"));
 
-if(true){
-  var a = 10;
-}
+// if(true){
+//   var a = 10;
+// }
 
-console.log(a);
+// console.log(a);
+
+const getUniqueArr = (arr) => {
+  let pointer = 0;
+  for (let index = 1; index < arr.length; index++) {
+    if (arr[pointer] !== arr[index]) {
+        pointer++;
+        arr[pointer] = arr[index];
+    }
+  }
+  return arr;
+};
+
+console.log(getUniqueArr([1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 5, 6]));

@@ -577,3 +577,27 @@ its remember the new version of i thats why so its print right output 12345 */
 
 // console.log(cleanUsernames(["  ALI ", " Zara", "Mo", "   UMAIR  ", "noor"]));
 // // Output: ["ali", "zara", "umair", "noor"]
+
+
+import readline from "readline";
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+function wordCount(paragraph) {
+  const words = paragraph.toLowerCase().split(/\s+/);
+  const result = {};
+
+  for (let word of words) {
+    result[word] = (result[word] || 0) + 1;
+  }
+
+  return result;
+}
+
+rl.question("Enter a paragraph: ", (input) => {
+  console.log(wordCount(input));
+  rl.close();
+});
